@@ -21,5 +21,11 @@ class EncuestadoController {
             res.json(clientes);
         });
     }
+    insert(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield database_1.default.query('INSERT INTO DATOS_ENCUESTADO SET ?', [req.body]);
+            res.json({ 'message': 'Departamento Guardado' });
+        });
+    }
 }
 exports.encuestadoController = new EncuestadoController();

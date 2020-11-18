@@ -10,7 +10,7 @@ class ClienteRoute {
 
     config(){
         this.router.get('/', encuestadoController.list);
-      
+        this.router.post('/', encuestadoController.insert);
     }
 }
 

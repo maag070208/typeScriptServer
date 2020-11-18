@@ -9,6 +9,7 @@ class ClienteRoute {
     }
     config() {
         this.router.get('/', encuestadoController_1.encuestadoController.list);
+        this.router.post('/', encuestadoController_1.encuestadoController.insert);
     }
 }
 const clienteRoute = new ClienteRoute();

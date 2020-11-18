@@ -7,6 +7,11 @@ class EncuestadoController {
     res.json(clientes);
   }
 
+  public async insert(req: Request, res: Response): Promise<void> {    
+    await  pool.query('INSERT INTO DATOS_ENCUESTADO SET ?',[req.body]);
+    res.json({'message': 'Departamento Guardado'});
+   }
+
 
 }
 
