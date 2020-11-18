@@ -1,7 +1,7 @@
 import { consultaEncuestadoController } from './../controllers/consultaEncuestadoController';
 import { Router } from 'express';
 
-class ClienteRoute {
+class ConsultaEncuestadoRoute {
     public router: Router = Router();
 
     constructor(){
@@ -13,5 +13,5 @@ class ClienteRoute {
     }
 }
 
-const clienteRoute = new ClienteRoute();
-export default clienteRoute.router;
+const consultaEncuestadoRoute = new ConsultaEncuestadoRoute();
+export default consultaEncuestadoRoute.router;
