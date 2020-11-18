@@ -26,8 +26,8 @@ class Server {
         this.app.use(bodyParser.json({ limit: '100mb' }))
         this.app.use(bodyParser.urlencoded({ extended: true, limit: '100mb' }))
         this.app.use(express.urlencoded({extended: false}));
-    
     }
+
     //aqui insertamos la rutas 
     routes():void{
         this.app.use('/', indexRoutes);
@@ -40,6 +40,7 @@ class Server {
 			console.log('Server on port', this.app.get('port'));
 		});
     }
+    
 }
 const server = new Server();
 server.start();
