@@ -6,7 +6,7 @@ import cors from 'cors';
 
 import indexRoutes from './routes/indexRoute';
 import encuestadoRoute from './routes/encuestadoRoute';
-
+import consultaEncuestadoRoute from './routes/consultaEncuestadoRoute';
 const bodyParser = require('body-parser');
 
 class Server {
@@ -32,6 +32,7 @@ class Server {
     routes():void{
         this.app.use('/', indexRoutes);
         this.app.use('/encuestado',encuestadoRoute);
+        this.app.use('/encuestado/select',consultaEncuestadoRoute);
     }
 
     //aqui iniciamos el servidor 
