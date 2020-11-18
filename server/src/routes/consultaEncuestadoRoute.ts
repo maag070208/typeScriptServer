@@ -9,7 +9,7 @@ class ConsultaEncuestadoRoute {
     }
 
     config(){
-        this.router.get('/', consultaEncuestadoController.insert);
+        this.router.post('/', consultaEncuestadoController.insert);
     }
 }
 
